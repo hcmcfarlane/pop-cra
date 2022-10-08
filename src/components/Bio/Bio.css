@@ -1,0 +1,58 @@
+#info-sect {
+	margin: calc(var(--headheight) / 2);
+}
+
+button.github {
+	margin-right: 1em;
+}
+
+h2 {
+	font-family: var(--font-headers);
+	letter-spacing: var(--letter-spacing-head);
+	text-shadow: var(--text-shadow-head-pink);
+	font-size: 2.2em;
+}
+
+#h2-edit {
+	text-shadow: var(--text-shadow-head-yellow);
+	font-size: 1.8em;
+}
+
+.main-sect {
+	margin-top: calc(var(--headheight) / 4);
+}
+
+.main-code-wrapper {
+	display: grid;
+	grid-template-columns: 60% 40%;
+}
+
+.text-wrapper-code {
+	/* width: 60%; */
+}
+
+.text {
+	margin-top: calc(var(--headheight) / 4);
+	font-size: 1em;
+	font-weight: 500;
+}
+
+.text-wrapper-edit {
+	width: 70%;
+	font-size: 0.9em;
+}
+
+#img-bang-wrapper {
+}
+
+/* TODO:  BACKGROUND IMG NEEDS REPLACING WITH SVG WITH TRNSPT BG */
+#img-bang {
+	/* background-image: url("./comic-bang-vintage-style-vintage-comic-style-vector-bang-104334659-TOREPLACE.jpg"); */
+	/* background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain; */
+	margin: -2.5em;
+	z-index: -1;
+	width: 100%;
+	height: auto;
+}
