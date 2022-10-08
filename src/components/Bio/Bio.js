@@ -16,11 +16,6 @@ export default function Bio() {
 							repellat repudiandae!
 						</p>
 						<p className="text">
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Nesciunt sint, cupiditate deserunt, magni
-							rerum delectus qui nemo recusandae doloribus.
-						</p>
-						<p className="text">
 							<Button
 								colour="blue"
 								addClass="github"
@@ -35,6 +30,11 @@ export default function Bio() {
 								link="https://www.linkedin.com/in/hannah-mcfarlane-8a764777/"
 								target="_blank"
 							/>
+						</p>
+						<p className="text">
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Nesciunt sint, cupiditate deserunt, magni
+							rerum delectus qui nemo recusandae doloribus.
 						</p>
 					</div>
 					<div className="img-bang-wrapper">
