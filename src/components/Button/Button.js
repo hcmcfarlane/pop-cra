@@ -5,6 +5,8 @@ export default function Button({ colour, text, link, target, addClass }) {
 	let linkTarget;
 	let linkLink;
 	let buttonText;
+
+	//set default button colour to blue, target to self, link to nothing, text to nothing
 	colour
 		? (classColour = `button-${colour} ${addClass}`)
 		: (classColour = `button-blue ${addClass}`);
