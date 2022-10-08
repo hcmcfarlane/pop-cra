@@ -1,0 +1,54 @@
+#contact-cont {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.dot-border {
+	margin: 2em 1em;
+	border: 8px dotted var(--black);
+	padding: 1.5em;
+}
+
+.dot-border:first-child {
+	margin-left: 0;
+}
+
+.dot-border:last-child {
+	margin-right: 0;
+}
+
+fieldset {
+	border: none;
+}
+
+#h2-contact {
+	text-shadow: var(--text-shadow-head-blue);
+	margin-bottom: 0.5em;
+}
+
+#contact-form input,
+#contact-form textarea {
+	display: block;
+	margin-bottom: 1em;
+	font-size: 0.9em;
+	font-family: var(--font-code);
+	/* font-family: "IBM Plex Mono"; */
+	font-weight: 450;
+	border: 4px solid var(--black);
+	border-radius: 8px;
+	padding: 5px;
+	width: calc(100% - 1.5em);
+}
+
+#mond-info {
+	font-weight: 600;
+	font-size: 0.8em;
+}
+#mondrian-grid #mond-info a {
+	text-decoration: underline;
+	color: var(--blue);
+}
+#mondrian-grid #mond-info a:hover {
+	color: var(--pink);
+	cursor: pointer;
+}
