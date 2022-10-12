@@ -87,11 +87,12 @@ export const generateMondrian = () => {
 		gridHeight,
 		dataId,
 		rectanglesTotal,
-		col,
-		row,
-		moveRight,
-		moveDown,
-		color,
+		grid,
+		// col,
+		// row,
+		// moveRight,
+		// moveDown,
+		// color,
 	};
 };
 
@@ -133,10 +134,10 @@ const updateHTMLandCSS = (
 	squareColor //color
 ) => {
 	const divClass = `square${elems}`;
-	// document
-	// 	.getElementById("mond-grid")
-	// 	.appendChild(document.createElement("div"))
-	// 	.classList.add(`square${elems}`);
+	document
+		.getElementById("mond-grid")
+		.appendChild(document.createElement("div"))
+		.classList.add(`square${elems}`);
 	document.querySelector(`.square${elems}`).style.gridArea = `${
 		rowIndex + 1
 	}/${colIndex + 1}/${rowIndex + rows + 1}/${colIndex + cols + 1}`;

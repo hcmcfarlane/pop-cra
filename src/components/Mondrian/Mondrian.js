@@ -10,30 +10,33 @@ import { generateMondrian } from "./generateMondrian.js";
 // };
 
 export default function Mondrian() {
-	const [gridWidth, setGridWidth] = useState("");
-	const [gridHeight, setGridHeight] = useState("");
-	const [dataId, setDataId] = useState("");
+	const [gridW, setGridW] = useState(0);
+	const [gridH, setGridH] = useState(0);
+	const [dataIdKey, setDataIdKey] = useState("");
+	const [rectangles, setRectangles] = useState(0);
+	const [colourGrid, setColourGrid] = useState([]);
 
 	useEffect(() => {
 		callMondrianGenerator();
-	});
+	}, []);
 
 	function callMondrianGenerator() {
-		let w;
-		let h;
-		let d;
-		({ w, h, d } = generateMondrian());
-		setGridWidth(w);
-		setGridHeight(h);
-		setDataId(d);
+		const { gridWidth, gridHeight, dataId, rectanglesTotal, grid } =
+			generateMondrian();
+		// console.log({ gridWidth, gridHeight, dataId, rectanglesTotal, grid });
+		setGridW(gridWidth);
+		setGridH(gridHeight);
+		setDataIdKey(dataId);
+		setRectangles(rectanglesTotal);
+		setColourGrid(grid);
 	}
 
-	const divStyle = {
-		gridArea: `${rowIndex + 1}/${colIndex + 1}/${rowIndex + rows + 1}/${
-			colIndex + cols + 1
-		}`,
-		background: squareColor,
-	};
+	// const divStyle = {
+	// 	gridArea: `${rowIndex + 1}/${colIndex + 1}/${rowIndex + rows + 1}/${
+	// 		colIndex + cols + 1
+	// 	}`,
+	// 	background: squareColor,
+	// };
 
 	// updateHTMLandCSS = (
 	//     elems, //rectanglesTotal in total
@@ -54,12 +57,10 @@ export default function Mondrian() {
 	// );
 
 	return (
-		<div class="dot-border">
+		<div className="dot-border">
 			<div id="mondrian-grid" onClick={() => callMondrianGenerator()}>
 				<figure>
-					<div id="mond-grid" className data_id={dataId}>
-						<div className={divClass} style={{}}></div>
-					</div>
+					<div id="mond-grid" data_id={dataIdKey}></div>
 					<figcaption>
 						Click to generate new.{" "}
 						<span id="mond-info">
