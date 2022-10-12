@@ -123,6 +123,7 @@ const generateGrid = (width, height) => {
 };
 
 /*💥💥 This function (updateHTMLandCSS) needs to loop over the rows and cols, as it assigns the colours to each one - how to move this into react-land??? 💥*/
+//TODO: remove all the query selectors as they are now in the component, I think?
 
 //update HTML and CSS
 const updateHTMLandCSS = (
