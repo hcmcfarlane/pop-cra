@@ -25,6 +25,7 @@ export default function Mondrian() {
 		const { gridWidth, gridHeight, dataId, rectanglesTotal, grid } =
 			generateMondrian();
 		// console.log({ gridWidth, gridHeight, dataId, rectanglesTotal, grid });
+		console.log(grid[2][3]);
 		setGridW(gridWidth);
 		setGridH(gridHeight);
 		setDataIdKey(dataId);
@@ -59,7 +60,7 @@ export default function Mondrian() {
 											Math.floor(Math.random() * 2) +
 											1
 										}`,
-										// background: `${colourGrid[r][c]}`,
+										backgroundColor: `${colourGrid[r][c]}`, //TODO: This doesn't work for some reason!?
 									}}
 									key={`row-${rowi} col-${colj}`}></div>
 							);
