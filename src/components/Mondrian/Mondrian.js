@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { generateMondrian } from "./generateMondrian.js";
+import "./Mondrian.css";
 
 // document.onload = generateMondrian();
 // document.getElementsByTagName("button")[0].onclick = function () {
@@ -38,29 +39,32 @@ export default function Mondrian() {
 	// 	background: squareColor,
 	// };
 
-	// updateHTMLandCSS = (
-	//     elems, //rectanglesTotal in total
-	//     colIndex, //col
-	//     rowIndex, //row
-	//     cols, //moveRight
-	//     rows, //moveDown
-	//     squareColor //color
-	// )
-
-	// updateHTMLandCSS(
-	//     rectanglesTotal,
-	//     col,
-	//     row,
-	//     moveRight,
-	//     moveDown,
-	//     color
-	// );
-
 	return (
 		<div className="dot-border">
 			<div id="mondrian-grid" onClick={() => callMondrianGenerator()}>
 				<figure>
-					<div id="mond-grid" data_id={dataIdKey}></div>
+					<div id="mond-grid" data_id={dataIdKey.data_id}></div>
+					{colourGrid.map((r, rowi) => {
+						return r.map((c, colj) => {
+							return (
+								<div
+									className={`square${rectangles}`}
+									style={{
+										gridArea: `${rowi + 1}/${colj + 1}/${
+											rowi +
+											Math.floor(Math.random() * 2) + //TODO: replace random number with actual number of remaining spaces (availabilityRight and availabilityDown in original)
+											1
+										}/${
+											colj +
+											Math.floor(Math.random() * 2) +
+											1
+										}`,
+										// background: `${colourGrid[r][c]}`,
+									}}
+									key={`row-${rowi} col-${colj}`}></div>
+							);
+						});
+					})}
 					<figcaption>
 						Click to generate new.{" "}
 						<span id="mond-info">
@@ -69,6 +73,10 @@ export default function Mondrian() {
 						<br />
 						Developed by{" "}
 						<a href="https://twitter.com/sanja_kaz">@sanja_kaz</a>
+						<p>
+							{colourGrid.length > 0 && colourGrid.length} and{" "}
+							{colourGrid.length > 0 && colourGrid[0].length}
+						</p>
 					</figcaption>
 				</figure>
 			</div>

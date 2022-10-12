@@ -1,0 +1,31 @@
+#mondrian-grid {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#mond-grid {
+	background-color: var(--black);
+	display: grid;
+	width: 100%;
+	height: auto;
+	grid-gap: 8px;
+}
+
+#mondrian-grid figcaption {
+	margin: 0.5em;
+	color: grey;
+	line-height: 1em;
+	color: var(--black);
+	font-size: 0.5em;
+	letter-spacing: 0.05rem;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+#mondrian-grid figcaption a {
+	color: currentColor;
+}
+#mondrian-grid figcaption a:hover {
+	color: var(--pink);
+}
